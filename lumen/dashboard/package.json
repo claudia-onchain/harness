@@ -1,0 +1,37 @@
+{
+  "name": "lumen-dashboard",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Lumen local creative dashboard (React 19 + Vite + TypeScript).",
+  "scripts": {
+    "dev": "vite --port 5174",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "preview": "vite preview --port 5175"
+  },
+  "dependencies": {
+    "@dnd-kit/core": "6.3.1",
+    "@ffmpeg/core": "0.12.10",
+    "@ffmpeg/ffmpeg": "0.12.15",
+    "@ffmpeg/util": "0.12.2",
+    "@fontsource-variable/inter": "5.3.0",
+    "@fontsource-variable/jetbrains-mono": "5.3.0",
+    "@fontsource-variable/space-grotesk": "5.3.0",
+    "konva": "10.8.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "react-konva": "19.3.0",
+    "react-router-dom": "7.18.4",
+    "tone": "15.1.22",
+    "wavesurfer.js": "8.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "typescript": "7.0.2",
+    "vite": "8.3.4"
+  },
+  "author": "Claudia <339291616+claudia-onchain@users.noreply.github.com> (https://useclaudia.xyz)"
+}

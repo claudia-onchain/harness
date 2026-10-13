@@ -1,0 +1,18 @@
+modules = ["nodejs-22"]
+run = "npm --prefix lumen run replit"
+
+[nix]
+channel = "stable-24_11"
+
+[env]
+LUMEN_HOSTED = "1"
+LUMEN_PORT = "4747"
+
+[[ports]]
+localPort = 4747
+externalPort = 80
+
+[deployment]
+build = ["sh", "-c", "cd lumen && npm install && npm run build"]
+run = ["sh", "-c", "npm --prefix lumen run replit"]
+deploymentTarget = "cloudrun"

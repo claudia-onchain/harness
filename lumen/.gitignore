@@ -1,0 +1,11 @@
+node_modules
+dashboard/node_modules
+dashboard/dist
+.DS_Store
+*.log
+.lumen/
+.env
+.env.*
+*.tgz
+coverage/
+.vite/
