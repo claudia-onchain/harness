@@ -1,0 +1,48 @@
+{
+  "name": "pulse-harness",
+  "version": "0.1.0",
+  "description": "Pulse: a Grok-native harness for things that move. Watchlists → routines → briefs and alerts on Telegram, with live X search, Grok Imagine visuals and exact cost receipts.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Claudia <339291616+claudia-onchain@users.noreply.github.com> (https://useclaudia.xyz)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claudia-onchain/harness.git",
+    "directory": "pulse"
+  },
+  "homepage": "https://github.com/claudia-onchain/harness/tree/main/pulse#readme",
+  "bugs": {
+    "url": "https://github.com/claudia-onchain/harness/issues"
+  },
+  "bin": {
+    "pulse": "bin/pulse.js"
+  },
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node bin/pulse.js",
+    "check": "node scripts/check.mjs",
+    "test": "node --test \"test/*.test.js\"",
+    "mock": "node test/mock-grok.js"
+  },
+  "keywords": [
+    "grok",
+    "xai",
+    "agent",
+    "harness",
+    "x-search",
+    "telegram",
+    "crypto",
+    "alerts",
+    "imagine"
+  ],
+  "dependencies": {}
+}

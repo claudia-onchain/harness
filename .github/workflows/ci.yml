@@ -42,3 +42,39 @@ jobs:
           node bin/lumen.js doctor --offline --no-color || true
           node bin/lumen.js chains --no-color | head -5
           echo "say hi" | node bin/lumen.js --model mock:echo --no-color | head -5
+
+  pulse:
+    name: Pulse · Node ${{ matrix.node }} · ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: pulse
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        node: [22, 24]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      # Pulse has no dependencies: nothing to install.
+      - name: Check
+        run: npm run check
+      - name: Test (offline, against test/mock-grok.js)
+        run: npm test
+      - name: Smoke the CLI against the mock
+        run: |
+          node test/mock-grok.js > mock.log 2>&1 &
+          sleep 2
+          export XAI_BASE_URL=$(grep -oE 'http://[^ ]+' mock.log | head -1)
+          export PULSE_HOME=$RUNNER_TEMP/pulse-home
+          node bin/pulse.js --version
+          node bin/pulse.js init --offline --chat 1
+          node bin/pulse.js keys set xai ci-key
+          node bin/pulse.js watch add "Solana" --symbols SOL --keywords solana --every 15m --chat 1
+          ID=$(node bin/pulse.js watch list --json | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>console.log(JSON.parse(s)[0].id))')
+          node bin/pulse.js run --once "$ID"
+          node bin/pulse.js cost --today
+          node bin/pulse.js doctor

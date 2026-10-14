@@ -6,8 +6,21 @@ project with its own README, tests and licence.
 | Harness | What it is | Status |
 | --- | --- | --- |
 | **[Lumen](lumen/)** | A bring-your-own-keys terminal agent with a local creative dashboard: any model, 45 chains, image/video/speech/music generation, “show me” overlays on macOS, 100+ skills, and a web studio the agent can drive. | 0.1.0 |
+| **[Pulse](pulse/)** | A Grok-native harness for things that move: watchlists → scheduled routines → briefs and alerts on Telegram, built on Grok's live X search, Grok Imagine visuals and exact cost receipts. Zero dependencies. | 0.1.0 |
 
 [![Lumen: a bring-your-own-keys terminal agent with a local creative dashboard](lumen/assets/banner.svg)](lumen/)
+
+## Pulse in one minute
+
+```sh
+cd harness/pulse && npm link
+pulse init && pulse keys set telegram <bot token>
+pulse watch add "Solana" --symbols SOL --keywords solana --handles solana --every 15m --cap 0.40 --chat <chatId>
+pulse run
+```
+
+Needs an xAI key (`XAI_API_KEY`) and a Telegram bot. Every alert ships with the posts that triggered it
+(`pulse why <id>`) and the exact dollars it cost (`pulse cost`). See [pulse/README.md](pulse/README.md).
 
 ## Install Lumen
 
@@ -27,7 +40,8 @@ Add your keys as Secrets. Details in [lumen/README.md → Run on Replit](lumen/R
 
 ## Develop
 
-CI (`.github/workflows/ci.yml`) installs, builds, checks and tests every harness on Node 22 and 24, Linux and macOS.
+CI (`.github/workflows/ci.yml`) installs, builds, checks and tests every harness on Node 22 and 24, Linux and macOS
+(Pulse is also smoke-tested end to end against its bundled mock of api.x.ai).
 Contributions: [lumen/CONTRIBUTING.md](lumen/CONTRIBUTING.md).
 
 ---

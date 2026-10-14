@@ -1,0 +1,90 @@
+[
+  {
+    "id": "1977812345678901234",
+    "handle": "DefiLlama",
+    "name": "DefiLlama",
+    "url": "https://x.com/DefiLlama/status/1977812345678901234",
+    "text": "Solana DEX volume just crossed $9.4B in 24h, highest since March. Jupiter 41%, Raydium 27%, Orca 12%. $SOL",
+    "created_at": "2026-10-13T06:12:00Z",
+    "likes": 1840,
+    "reposts": 412,
+    "symbols": ["SOL"]
+  },
+  {
+    "id": "1977819876543210987",
+    "handle": "HyperliquidX",
+    "name": "Hyperliquid",
+    "url": "https://x.com/HyperliquidX/status/1977819876543210987",
+    "text": "HIP-5 is live. Builder codes now settle in $HYPE and 97% of fees route to the Assistance Fund. Open interest at ATH: $14.2B.",
+    "created_at": "2026-10-13T07:45:00Z",
+    "likes": 5320,
+    "reposts": 1203,
+    "symbols": ["HYPE"]
+  },
+  {
+    "id": "1977823456789012345",
+    "handle": "Cobie",
+    "name": "Cobie",
+    "url": "https://x.com/Cobie/status/1977823456789012345",
+    "text": "everyone's max long $HYPE on the HIP-5 news. funding at 0.09%/8h. this is usually where it hurts",
+    "created_at": "2026-10-13T08:30:00Z",
+    "likes": 9870,
+    "reposts": 844,
+    "symbols": ["HYPE"]
+  },
+  {
+    "id": "1977830001112223334",
+    "handle": "solana",
+    "name": "Solana",
+    "url": "https://x.com/solana/status/1977830001112223334",
+    "text": "Alpenglow mainnet activation is scheduled for epoch 912. ~150 ms finality. Validators: upgrade to v3.1.4 before Oct 20.",
+    "created_at": "2026-10-13T09:02:00Z",
+    "likes": 7210,
+    "reposts": 2110,
+    "symbols": ["SOL"]
+  },
+  {
+    "id": "1977834455667788990",
+    "handle": "lookonchain",
+    "name": "Lookonchain",
+    "url": "https://x.com/lookonchain/status/1977834455667788990",
+    "text": "A whale withdrew 412,000 $SOL ($71.3M) from Binance to a new wallet 2 hours ago and staked all of it with Jito.",
+    "created_at": "2026-10-13T10:15:00Z",
+    "likes": 2250,
+    "reposts": 530,
+    "symbols": ["SOL"]
+  },
+  {
+    "id": "1977838899001122334",
+    "handle": "0xngmi",
+    "name": "0xngmi",
+    "url": "https://x.com/0xngmi/status/1977838899001122334",
+    "text": "hyperliquid did $412B perp volume in the last 30d, more than every other onchain perp dex combined. $HYPE buyback was $28M this week",
+    "created_at": "2026-10-13T11:40:00Z",
+    "likes": 3110,
+    "reposts": 702,
+    "symbols": ["HYPE"]
+  },
+  {
+    "id": "1977842233445566778",
+    "handle": "WuBlockchain",
+    "name": "Wu Blockchain",
+    "url": "https://x.com/WuBlockchain/status/1977842233445566778",
+    "text": "SEC has approved the 21Shares and Bitwise spot $SOL ETFs with staking. Trading expected to begin Thursday on Cboe.",
+    "created_at": "2026-10-13T13:05:00Z",
+    "likes": 12400,
+    "reposts": 4310,
+    "symbols": ["SOL"]
+  },
+  {
+    "id": "1977847788990011223",
+    "handle": "jeffdoesnotreply",
+    "name": "jeff.hl",
+    "url": "https://x.com/jeffdoesnotreply/status/1977847788990011223",
+    "text": "HyperEVM gas reduced 40% with the 0.9.3 upgrade. No changes to $HYPE staking. More soon.",
+    "created_at": "2026-10-13T14:20:00Z",
+    "likes": 4480,
+    "reposts": 610,
+    "symbols": ["HYPE"]
+  }
+]
