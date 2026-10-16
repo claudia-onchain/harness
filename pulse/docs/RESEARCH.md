@@ -1,6 +1,6 @@
 # xAI / Grok developer platform — research snapshot (2026-10-14)
 
-Purpose: ground-truth for designing the Grok agent harness in `Agents/ai`. Every fact below was read from a fetched page on the date above; the URL sits next to the fact. Where a page could not be fetched or two sources disagreed, it is listed in the final "Open questions" section rather than guessed.
+Purpose: ground-truth for designing the Grok agent harness in `harness/pulse`. Every fact below was read from a fetched page on the date above; the URL sits next to the fact. Where a page could not be fetched or two sources disagreed, it is listed in the final "Open questions" section rather than guessed.
 
 Branding note: docs.x.ai now calls the company "SpaceXSI" / "SpaceXAI" (SpaceX acquired xAI, deal closed 2026-02-02; "SpaceXAI" brand went live 2026-07-06; Musk announced a further rename to "SpaceXSI" in early October 2026). The API host, key env var (`XAI_API_KEY`), console (console.x.ai), docs (docs.x.ai) and model names are unchanged. Sources: https://www.theregister.com/offbeat/2026/10/05/musk-follows-trumps-lead-swaps-ai-for-si-in-spacex-rebrand/5301090 , https://en.wikipedia.org/wiki/SpaceXAI . The TypeScript SDK's client class is literally `SpaceXAI` (https://github.com/xai-org/xai-sdk-ts).
 

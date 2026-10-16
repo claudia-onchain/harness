@@ -52,7 +52,7 @@ Gemini. A local Ollama or LM Studio also works. Crypto and media features unlock
 ## Layout and ownership
 
 ```
-Agents/cli/
+harness/lumen/
   package.json            [A] name "lumen-agent", bin { lumen: bin/lumen.js }
   bin/lumen.js            [A]
   src/

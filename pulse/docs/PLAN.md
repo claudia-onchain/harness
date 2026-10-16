@@ -1,7 +1,7 @@
 # Pulse — a Grok-native harness for things that move
 
 Pulse is a self-hosted "Grok Bot": watchlists → routines → briefs and alerts, with receipts. It lives at
-`Agents/ai` locally and will be published as `pulse/` in `github.com/claudia-onchain/harness` next to Lumen.
+`pulse/` in `github.com/claudia-onchain/harness`, next to Lumen.
 Everything here is grounded in `docs/RESEARCH.md` (verified against docs.x.ai, October 2026).
 
 ## Why Grok, specifically
