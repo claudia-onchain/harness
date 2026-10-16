@@ -13,6 +13,8 @@ import { runBrief } from "../src/routines/brief.js";
 import { scanWindow, canonicalX } from "../src/sensors/x.js";
 
 const silentLog = { info() {}, warn() {}, error() {}, debug() {}, child() { return silentLog; } };
+// The fixture posts are dated 2026-10-13; a watch scans from its last run's day, so pin that day to keep them in the window.
+const FIXTURE_DAY = "2026-10-13T00:00:00Z";
 const config = { model: { scan: "grok-4.3", judge: "grok-4.7", image: "grok-imagine-image-2.0", video: "grok-imagine-video-1.5-lite" }, caps: { runUsd: 0.5, dayUsd: 5 }, telegram: { chatId: "1" } };
 
 function harness(mock, { caps = config.caps } = {}) {
@@ -34,7 +36,7 @@ test("watch run: scan → judge → deliver, every response metered and replayab
   const run = store.runs.start({ routineId: routine.id });
   const m = metered(rt, { routineId: routine.id, runId: run.id, runCapUsd: 0.5 });
   const ctx = { run, store, budget: rt.budget, log: silentLog, config, grok: m.grok, imagine: m.imagine, send: (c, media, cap) => deliver(rt, c, media, cap) };
-  const result = await runWatch(routine, ctx);
+  const result = await runWatch({ ...routine, last_run_at: FIXTURE_DAY }, ctx);
   const rows = store.responses.byRun(run.id);
   assert.ok(rows.length >= 1, "scan response stored for replay");
   assert.ok(rows.every((r) => r.cost_ticks > 0), "cost ticks recorded");
@@ -65,7 +67,7 @@ test("watch run stops at the run cap but keeps what it has", async (t) => {
   const run = store.runs.start({ routineId: routine.id });
   const m = metered(rt, { routineId: routine.id, runId: run.id, runCapUsd: 0.5 });
   const ctx = { run, store, budget: rt.budget, log: silentLog, config, grok: m.grok, imagine: m.imagine, send: async () => {} };
-  await assert.rejects(() => runWatch(routine, ctx), (e) => e instanceof BudgetError && e.scope === "run");
+  await assert.rejects(() => runWatch({ ...routine, last_run_at: FIXTURE_DAY }, ctx), (e) => e instanceof BudgetError && e.scope === "run");
   assert.ok(store.responses.byRun(run.id).length >= 1, "the response that crossed the cap is still stored");
   assert.ok(store.costs.today(routine.id).usd >= 0.4);
 });
