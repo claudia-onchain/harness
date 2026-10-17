@@ -34,7 +34,10 @@ test("deny and expiry resolve without rejecting", async () => {
   ap.decide(d.id, "deny", "tj");
   assert.equal((await d).approved, false);
   const e = ap.request({ kind: "spend" });
+  // The expiry timer is unref'd by design; hold the loop open or Node 22's runner cancels the test before it fires.
+  const hold = setTimeout(() => {}, 1000);
   const res = await e;
+  clearTimeout(hold);
   assert.equal(res.status, "expired");
   assert.equal(store.approvals.get(e.id).status, "expired");
   store.close();
