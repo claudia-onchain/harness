@@ -31,7 +31,8 @@
     "start": "node bin/pulse.js",
     "check": "node scripts/check.mjs",
     "test": "node --test \"test/*.test.js\"",
-    "mock": "node test/mock-grok.js"
+    "mock": "node test/mock-grok.js",
+    "assets": "node scripts/render-assets.mjs"
   },
   "keywords": [
     "grok",

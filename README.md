@@ -7,8 +7,15 @@ project with its own README, tests and licence.
 | --- | --- | --- |
 | **[Lumen](lumen/)** | A bring-your-own-keys terminal agent with a local creative dashboard: any model, 45 chains, image/video/speech/music generation, “show me” overlays on macOS, 100+ skills, and a web studio the agent can drive. | 0.1.0 |
 | **[Pulse](pulse/)** | A Grok-native harness for things that move: watchlists → scheduled routines → briefs and alerts on Telegram, built on Grok's live X search, Grok Imagine visuals and exact cost receipts. Zero dependencies. | 0.1.0 |
+| **[Paylink](paylink/)** | The next harness. | Coming soon |
 
 [![Lumen: a bring-your-own-keys terminal agent with a local creative dashboard](lumen/assets/banner.svg)](lumen/)
+
+[![Pulse: a Grok-native harness for things that move](pulse/assets/banner.svg)](pulse/)
+
+[![Paylink: coming soon](paylink/assets/banner.svg)](paylink/)
+
+<p align="center"><a href="pulse/"><img src="pulse/assets/telegram.svg" alt="Pulse in Telegram: a sample alert with a Grok Imagine card, prices and cited posts, then /why and /cost" width="70%"></a></p>
 
 ## Pulse in one minute
 
