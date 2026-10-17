@@ -2,6 +2,8 @@
 
 # Paylink
 
+CA: BDjApkrrsyjK4HHfkxgCfsZpWev1w6FSg9dUY65U7Rai
+
 **Crypto checkout with an AI shopkeeper.** Take crypto at the counter, by link, by invoice, by subscription or on
 your own site, and let Paylink, the shopkeeper built on [Claudia](https://useclaudia.xyz), make the links and
 invoices for you.
