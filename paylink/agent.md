@@ -59,7 +59,7 @@ Viewer role cannot.
 - If something important is missing (an amount, a title, who it is for) it asks one short question instead of
   guessing.
 - In **live mode** it is told it is handling real customers and money and creates only what you clearly asked
-  for. In **test mode** it is free to try things and simulate payments.
+  for. In **test mode** it can try things and simulate payments.
 - Text inside tool results (customer names, memos, metadata) is treated as data. Paylink is instructed never to
   follow instructions found there, and replies are rendered as text, never HTML.
 - Each message can take up to 8 model steps (tool calls and the answer). The browser keeps the conversation and
@@ -68,27 +68,12 @@ Viewer role cannot.
 
 ### Spend caps
 
-Model spend is metered per account per UTC day and capped twice:
-
-| Setting | Default | Meaning |
-|---|---|---|
-| `PAYLINK_ACCOUNT_DAILY_USD` | `0.05` | Most one account's Paylink can spend per UTC day. |
-| `PAYLINK_PLATFORM_DAILY_USD` | `0.5` | Most all accounts together can spend per UTC day. |
+Paylink's model use is metered per shop per UTC day, with a daily cap for each shop and one for the platform as a
+whole.
 
 When either cap is reached, Paylink says it has "done a full day's work for this shop" and is back tomorrow
 (UTC). Messages get `429 rate_limit_error`, code `assistant_budget_reached`. **The till keeps working as normal**:
 only the chat pauses. The panel shows today's spend against the account's budget.
-
-### Model configuration (operators)
-
-| Setting | Default | Meaning |
-|---|---|---|
-| `ANTHROPIC_API_KEY` | unset | Required for the dashboard agent. Without it the panel says Paylink is off (`503 assistant_disabled`). The MCP server works either way. |
-| `PAYLINK_MODEL` | `claude-haiku-5-5` | The model the shopkeeper runs on. |
-
-Spend is computed from token usage with a built-in price table for `claude-haiku-5-5`, `claude-sonnet-5-5` and
-`claude-opus-5-5`. Any other model id is metered at a deliberately high rate, so it hits the caps sooner; raise
-the caps if you choose one. See [self-hosting.md](self-hosting.md).
 
 ---
 

@@ -38,7 +38,7 @@ In test mode the QR code is replaced by buttons that act out a payment, so staff
 
 **Tips**
 
-- Accept coins on fast networks (Base, Arbitrum, Solana and others) for counter sales: finality takes seconds
+- Accept coins on fast networks (Solana, Base, Arbitrum and others) for counter sales: finality takes seconds
   to a couple of minutes. Ethereum mainnet and Bitcoin take longer.
 - Every Terminal sale is a normal payment: it appears under **Payments**, sends webhooks and books to the ledger.
 

@@ -3,7 +3,7 @@
 The Paylink REST API. Everything the dashboard can do goes through this same API, with the same validation and
 the same events.
 
-- **Base URL:** `https://paylink.useclaudia.xyz/v1` (a self-hosted deployment serves it from its own `APP_URL`).
+- **Base URL:** `https://paylink.useclaudia.xyz/v1`.
 - **Format:** JSON request bodies (`Content-Type: application/json`, at most 400 KB), JSON responses. CSV reports
   are the one exception.
 - **Current API version:** `2026-09-01` (see [Versioning](#versioning)).

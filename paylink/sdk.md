@@ -17,9 +17,8 @@ npm install @paylink/node
 # or: pnpm add @paylink/node / yarn add @paylink/node
 ```
 
-The package lives in this repository at `packages/node` (`pnpm --filter @paylink/node build` compiles it to
-`dist/`). If it is not published to your registry yet, depend on it from the workspace or install the built
-folder.
+The SDK is a thin, typed layer over the [REST API](api-reference.md): anything it does, a plain `fetch` to
+`https://paylink.useclaudia.xyz/v1` can do too.
 
 ## Initialise
 
@@ -36,7 +35,7 @@ keys belong in the browser. `paylink.livemode` is `true` for `_live_` keys.
 
 | Option | Default | Meaning |
 |---|---|---|
-| `baseUrl` | `http://localhost:5000` | **Set this** to `https://paylink.useclaudia.xyz` (or your own deployment's origin). |
+| `baseUrl` | `http://localhost:5000` | **Set this** to `https://paylink.useclaudia.xyz`. |
 | `maxRetries` | `2` | Retries for retryable failures. |
 | `timeout` | `30000` | Per-request timeout in ms. |
 | `apiVersion` | unset | Sent as `Paylink-Version`. Informational today; the server has one version. |

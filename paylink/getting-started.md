@@ -27,7 +27,7 @@ ERC-1271. Sign-in uses an EVM address, even if you will mostly take Solana or Bi
 > where funds settle, transferring ownership and loosening payout approvals all need a fresh wallet signature
 > from the last ten minutes. A stolen browser session on its own cannot move your money.
 
-Some deployments show **Explore with a demo account** on the sign-in page. It gives you a shared test-mode
+The sign-in page can also show **Explore with a demo account**. It gives you a shared test-mode
 account full of sample activity. Use it to look around, not for real business.
 
 ## 2. Create your shop
@@ -37,7 +37,7 @@ After your first sign-in, onboarding asks three things:
 | Step | What you enter |
 |---|---|
 | **Your business** | Business name, a handle (your public short name, used in your directory page and invoice numbers), an optional category and website, and your default currency. Prices are set in that currency; customers pay in crypto at the live rate. |
-| **What you accept** | Which coins on which networks your checkout offers, for example USDC on Base and Solana, USDT on Ethereum. You can change this any time under **Settings → Payments**. |
+| **What you accept** | Which coins on which networks your checkout offers, for example USDC on Solana and Base, USDT on Ethereum. You can change this any time under **Settings → Payments**. |
 | **Start** | Your shop opens in **test mode** so you can practise first. |
 
 You can belong to several accounts with one wallet and switch between them in the dashboard. To add people,
@@ -191,7 +191,7 @@ description of what you sell, expected monthly volume and owners (with ownership
 from *Not verified* to *In review*, then *Verified* or *Not approved*. Once verified, the daily cap no longer
 applies unless the platform sets one for your account.
 
-Some deployments also require verification before any live payout. If so, a payout request says so
+Some accounts must also be verified before any live payout. If so, a payout request says so
 (`verification_required`).
 
 ## 8. Before you go live
