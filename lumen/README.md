@@ -2,6 +2,9 @@
 
 # Lumen
 
+69Q3KwAgMuQZBB3825RG2FS9ZBc7nnb57KLjYdyYpump
+
+
 **A bring-your-own-keys terminal agent with a local creative dashboard.**
 Chat with the model you choose. Lumen reads and edits code, queries 45 chains, generates images, video, speech
 and music, and shows you things on your Mac's screen. It can also drive its own web studio with a visible cursor.
